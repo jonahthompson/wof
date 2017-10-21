@@ -1,0 +1,15 @@
+.container-fluid {
+	width: 100%;
+}
+.col-1 {
+	width: 100px;
+	border: groove black;
+	padding-left: 0;
+	padding-right: 0;
+}
+.one {
+	height: 100px;
+	background-image: url('wof.jpeg');
+	background-size: 120px 100px;
+	background-repeat: no-repeat;
+}
