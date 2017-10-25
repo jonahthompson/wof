@@ -21,12 +21,11 @@ class Game {
         this.wrongLetter(letter);
       };
   };
-  // NEW GAME FUNCTION NOT WORKING
-  // newGame(){
-  //   $('.letterbox').empty();
-  //   $('#input').val('');
-  // let keyClone = $('.keys_wrap').clone();
-  // }
+  // NEW GAME FUNCTION NOT WORKING PROPERLY
+  newGame(){
+    $('.letterbox').empty();
+    $('#input').val('');
+  }
   wrongLetter(letter){ // DISPLAYS ON WIN EVENT WHICH SUCKS BUT I STILL HAD TO INCLUDE BECAUSE IT'S AWESOME
     if (this.phrase.includes(letter) == false){
     $('#dennis_modal').show();
@@ -79,14 +78,14 @@ $(function() {
   });
   $('#win_yes').on('click', function(){
     $('#winner_modal').hide();
-    // wof.newGame(); NOT WORKING
+    wof.newGame();
   });
   $('#win_no').on('click', function(){
     $('#winner_modal').hide();
   });
    $('#lose_yes').on('click', function(){
     $('#loser_modal').hide();
-    // wof.newGame(); NOT WORKING
+    wof.newGame();
   });
   $('#lose_no').on('click', function(){
     $('#loser_modal').hide();
@@ -98,7 +97,7 @@ $(function() {
   $('#submit').on('click', function(){
     wof.fullGuess();
   });
-  $('.key').on('click', function(){ //THIS COULD USE IMPROVEMENT
+  $('.key').on('click', function(){ //THIS COULD USE IMPROVEMENT, CAN'T GET KEYS TO DISABLE AFTER CLICK AND ENABLE AFTER NEW GAME
     let letter = $(this).data('name');
     wof.guessLetter(letter);
     $(this).html(`<div class="disabled"></div>`);
