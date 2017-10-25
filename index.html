@@ -1,74 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Wheel of Fortune</title>
+    <title>What's The Magic Word?</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
   <body>
-    <h1>Wheel of Fortune!</h1>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col"></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col"></div>
-		</div>
-		<div class="row">
-			<div class="col"></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col"></div>
-		</div>
-		<div class="row">
-			<div class="col"></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col"></div>
-		</div>
-		<div class="row">
-			<div class="col"></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col-1"><div class="box"></div></div>
-			<div class="col"></div>
+	<div id="bodywrap">
+		<div id="gamewrap">
+	   		<h1 id="heading">What's The Magic Word?</h1>
+			<div class="container-fluid">
+				<div class="wall_wrap">
+					<div class="row">
+						<div class="col"></div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div class="col"></div>
+					</div>
+					<div class="row">
+						<div class="col"></div>
+						<div class="col-1 wallcol">
+							<div class="box"></div>
+						</div>
+						<div class="col-1 wallcol">
+							<div class="box"></div>
+						</div>
+						<div class="col-1 wallcol">
+							<div id="letterbox0" class="letterbox"></div>
+						</div>
+						<div class="col-1 wallcol">
+							<div id="letterbox1" class="letterbox"></div>
+						</div>
+						<div class="col-1 wallcol">
+							<div id="letterbox2" class="letterbox"></div>
+						</div>
+						<div class="col-1 wallcol">
+							<div id="letterbox3" class="letterbox"></div>
+						</div>
+						<div class="col-1 wallcol">
+							<div id="letterbox4" class="letterbox"></div>
+						</div>
+						<div class="col-1 wallcol">
+							<div id="letterbox5" class="letterbox"></div>
+						</div>
+						<div class="col-1 wallcol">
+							<div class="box"></div>
+						</div>
+						<div class="col-1 wallcol">
+							<div class="box"></div>
+						</div>
+						<div class="col"></div>
+					</div>
+					<div class="row">
+						<div class="col"></div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div id="wallcol" class="col-1">
+							<div class="box"></div>
+						</div>
+						<div class="col"></div>
+					</div>
+				</div>
+				<div class="keys_wrap">
+					<div class="row">
+						<div class="col"></div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="q" data-name="q">Q</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="w" data-name="w">W</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="e" data-name="e">E</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="r" data-name="r">R</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="t" data-name="t">T</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="y" data-name="y">Y</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="u" data-name="u">U</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="i" data-name="i">I</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="o" data-name="o">O</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="p" data-name="p">P</div>
+							</div>
+						</div>
+						<div class="col"></div>
+					</div>
+					<div class="row">
+						<div class="col"></div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="a" data-name="a">A</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="s" data-name="s">S</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="d" data-name="d">D</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="f" data-name="f">F</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="g" data-name="g">G</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="h" data-name="h">H</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="j" data-name="j">J</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="k" data-name="k">K</div>
+							</div>
+						</div>
+						<div class="keycol">
+							<div class="userkeys">
+								<div class="key" id="l" data-name="l">L</div>
+							</div>
+						</div>
+						<div class="col"></div>
+					</div>
+					<div class="row">
+						<div class="col"></div>
+						<div class="bottomkeycol">
+							<div class="userkeys">
+								<div class="key" id="z" data-name="z">Z</div>
+							</div>
+						</div>
+						<div class="bottomkeycol">
+							<div class="userkeys">
+								<div class="key" id="x" data-name="x">X</div>
+							</div>
+						</div>
+						<div class="bottomkeycol">
+							<div class="userkeys">
+								<div class="key" id="c" data-name="c">C</div>
+							</div>
+						</div>
+						<div class="bottomkeycol">
+							<div class="userkeys">
+								<div class="key" id="v" data-name="v">V</div>
+							</div>
+						</div>
+						<div class="bottomkeycol">
+							<div class="userkeys">
+								<div class="key" id="b" data-name="b">B</div>
+							</div>
+						</div>
+						<div class="bottomkeycol">
+							<div class="userkeys">
+								<div class="key" id="n" data-name="n">N</div>
+							</div>
+						</div>
+						<div class="bottomkeycol">
+							<div class="userkeys">
+								<div class="key" id="m" data-name="m">M</div>
+							</div>
+						</div>
+						<div class="guesskeycol">
+							<div id="guesskey" class="userkeys">
+								<div class="guesskey">Chance!</div>
+							</div>
+						</div>
+						<div class="col"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col"></div>
+					<div id="denniscol" class="col-1">
+						<img id="dennisgif" src="dennisnedry.gif" />
+					</div>
+					<div id="denniscol" class="col-1">
+						<img id="dennisgif" src="dennisnedry.gif" />
+					</div>
+					<div id="denniscol" class="col-1">
+						<img id="dennisgif" src="dennisnedry.gif" />
+					</div>
+					<div class="col-1"></div>
+					<div class="col-1"></div>
+					<div class="col-1">
+						<input id="input" type="phrase" placeholder="Guess For The Win!">
+					</div>
+					<div class="col-1"></div>
+					<div class="col-1">
+						<button id="submit" type="submit">Submit</button>
+					</div>
+					<div class="col-1"></div>
+					<div class="col-1"></div>
+					<div class="col"></div>
+				</div>
+				<div class="row">
+					<div class="col"></div>
+					<div class="col-10">
+						<p id="yourclueis">Your Clue Is...</p>
+					</div>
+					<div class="col"></div>
+				</div>
+				<div class="row">
+					<div class="col"></div>
+					<div class="col-10">
+						<div id="cluebox">
+							<p id="funandgams">Fun and Games!</p>
+						</div>
+					<div class="col"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col"></div>
+					<div class="col-10">
+						<div id="play">Play!</div>
+					</div>
+					<div class="col"></div>
+				</div>
+			</div>
+			<div id="winner_modal">
+		  		<div id="winner_modal_header">
+			  		<span id="winner_close">&times;</span>
+				</div>
+				<h1 id="youwin">You Win!</h2>
+				<h3 id="wouldyou">Would you like to play again?</h3>
+				<button id="win_yes">Yes</button>
+				<button id="win_no">No</button>
+	 		</div>
+			<div id="dennis_modal">
+		  		<div id="dennis_modal_header">
+			  		<span id="dennis_close">&times;</span>
+				</div>
+				<img id="modal_gif" src="dennisnedry.gif" />
+				<h2>Guess Again!</h2>
+	 		</div>
+			<div id="loser_modal">
+		  		<div id="loser_modal_header">
+			  		<span id="loser_close">&times;</span>
+			    	<h2 id="youlose">You Lose!</h2>
+			    	<h3 id="wouldyou">Would you like to play again?</h3>
+			    	<button id="lose_yes">Yes</button>
+					<button id="lose_no">No</button>
+				</div>
+	 		</div>
 		</div>
 	</div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<audio id="audio" src="dennis_nedry_ahahah.mp3" display="none">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
   </body>
 </html>
