@@ -1,49 +1,61 @@
 class Game {
-  constructor(){
+  constructor() {
    
-    this.phraseArr = ['puzzle'];
-    this.phrase = this.phraseArr[0].split('');
+    this.phraseArray = [
+    {phrase: 'puzzle', clue: 'Fun and Games!'},
+    {phrase: 'batman', clue: 'The Dark Knight'},
+    {phrase: 'bigger', clue: 'Is Always Better'},
+    ];
+    this.round = 0;
+    this.phraseArr = this.phraseArray[this.round];
+    this.phrase = this.phraseArr.phrase.split('');
     this.correctLetters = [];
     this.incorrectLetters = [];
     this.phraseLetters = this.phrase.filter(function(elem, index, self) 
     {
       return index == self.indexOf(elem); 
     });
-  }; 
-  checkIfWon(letter){
+  };
+  checkIfWon(letter) {
       if (this.correctLetters.length == this.phraseLetters.length || this.userGuess == this.phrase) {
         $('#winner_modal').show();
+        this.round += 1;
+        this.newGame();
       };
       if (this.phrase.includes(letter)) {
-        
-      };
-      if (this.phrase.includes(letter) == false) {
-        this.wrongLetter(letter);
+        this.guessLetter();
       };
   };
-  // NEW GAME FUNCTION NOT WORKING
-  // newGame(){
-  //   $('.letterbox').empty();
-  //   $('#input').val('');
-  // let keyClone = $('.keys_wrap').clone();
-  // }
-  wrongLetter(letter){ // DISPLAYS ON WIN EVENT WHICH SUCKS BUT I STILL HAD TO INCLUDE BECAUSE IT'S AWESOME
-    if (this.phrase.includes(letter) == false){
+  newGame() {
+    this.phraseArr = this.phraseArray[this.round];
+    this.phrase = this.phraseArr.phrase.split('');
+    this.correctLetters = [];
+    this.incorrectLetters = [];
+    this.phraseLetters = this.phrase.filter(function(elem, index, self) 
+    {
+      return index == self.indexOf(elem); 
+    });
+    $('.letterbox').empty();
+    $('#input').val('');
+    $('#cluebox').text(this.phraseArr.clue);
+    this.guessLetter();
+  };
+  wrongLetter() {
     $('#dennis_modal').show();
     $('#audio').get(0).play();
-    };
   };
-  fullGuess(){
+  fullGuess() {
     let guess = $('#input').val();
     let userGuess = guess.toLowerCase();
-    if (userGuess === this.phrase.join('')){
-      $('#winner_modal').show(); 
-      this.checkIfWon(); 
+    if (userGuess === this.phrase.join('')) {
+      $('#winner_modal').show();
+      this.round += 1;
+      this.newGame();
     } else {
       this.wrongLetter();
     };
   };
-  guessLetter(letter){
+  guessLetter(letter) {
     var indices = [];
 
     if (this.phrase.includes(letter)) {
@@ -53,7 +65,8 @@ class Game {
         };
        };
        this.correctLetters.push(letter);
-    } else {
+    } else if (this.phrase[i] !== letter) {
+      this.wrongLetter();
       this.incorrectLetters.push(letter);
     };
     this.checkIfWon(letter);
@@ -65,42 +78,43 @@ $(function() {
   let keyClone = $('.keycol').clone();
   let wof = new Game();
 
-  $('#close').on('click', function(){
+  wof.newGame();
+
+  $('#close').on('click', function() {
     $('#modal').hide();
   });
-  $('#dennis_close').on('click', function(){
+  $('#dennis_close').on('click', function() {
     $('#dennis_modal').hide();
   });
-  $('#winner_close').on('click', function(){
-    $('#winner_modal').hide();
+  $('#winner_close').on('click', function() {
+    $('#winner_modal').hide(); 
   });
-  $('#loser_close').on('click', function(){
+  $('#loser_close').on('click', function() {
     $('#loser_modal').hide();
   });
-  $('#win_yes').on('click', function(){
+  $('#win_yes').on('click', function() {
     $('#winner_modal').hide();
-    // wof.newGame(); NOT WORKING
+    wof.newGame();
   });
-  $('#win_no').on('click', function(){
+  $('#win_no').on('click', function() {
     $('#winner_modal').hide();
   });
-   $('#lose_yes').on('click', function(){
+   $('#lose_yes').on('click', function() {
     $('#loser_modal').hide();
-    // wof.newGame(); NOT WORKING
+    wof.newGame();
   });
-  $('#lose_no').on('click', function(){
+  $('#lose_no').on('click', function() {
     $('#loser_modal').hide();
   });
-  $('.guesskey').on('click', function(){
+  $('.guesskey').on('click', function() {
     $('#input').show();
     $('#submit').show();
   });
-  $('#submit').on('click', function(){
+  $('#submit').on('click', function() {
     wof.fullGuess();
   });
-  $('.key').on('click', function(){ //THIS COULD USE IMPROVEMENT
+  $('.key').on('click', function() {
     let letter = $(this).data('name');
     wof.guessLetter(letter);
-    $(this).html(`<div class="disabled"></div>`);
   });
 });

@@ -230,6 +230,8 @@
 #win_no {
 	position: relative;
 	top: 300px;
+	text-decoration: none;
+	color: black;
 }
 #dennis_modal {
 	display: none;
